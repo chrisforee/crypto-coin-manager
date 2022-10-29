@@ -18,7 +18,7 @@ const [formInfo, setFormInfo] = useState({
 useEffect(()=>{
     axios.get(`http://localhost:8000/api/coin/${id}`)
         .then(response => {
-            console.log("SetForm info GET request", response)
+            console.log("SetForm info GET request success", response)
             setFormInfo(response.data.data)
         })
         .catch(err => console.log("Edit page get request error:", err))

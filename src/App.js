@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/coin/all" element={<AllCoins />} />
+        <Route path="/" element={<AllCoins />} />
         <Route path="/coin/new" element={<CoinForm />} />
         <Route path="/coin/update/:id" element={<UpdateCoin />} />
         <Route path = "/coin/details/:id" element= {<CoinDetails />}/>

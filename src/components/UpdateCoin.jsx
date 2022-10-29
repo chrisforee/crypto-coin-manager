@@ -19,7 +19,7 @@ const UpdateCoin = () => {
 })
 
 useEffect(()=>{
-    axios.get(`http://localhost:8000/api/coin/update/${id}`)
+    axios.get(`http://localhost:8000/api/coin/${id}`)
         .then(response => {
             console.log(response)
             setFormInfo(response.data.data)

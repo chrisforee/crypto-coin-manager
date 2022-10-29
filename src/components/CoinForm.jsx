@@ -28,7 +28,7 @@ const CoinForm = () => {
         axios.post("http://localhost:8000/api/coin/new", formInfo)
             .then(response =>{
                 console.log("Post request: ", response)
-                navigate("/coin/all")
+                navigate("/")
             })
             .catch((err) => {
                 const errorResponse = err.response.data.error.errors;
@@ -57,7 +57,7 @@ const CoinForm = () => {
             </div>
             <div className='text-start m-3'>
                 <label className='m-3'>URL:</label>
-                <input type="number" className='form-label' name='website' onChange={onChangeHandler}></input>
+                <input type="text" className='form-label' name='website' onChange={onChangeHandler}></input>
             </div>
             <div className='text-start m-3'>
                 <label className='m-3'>Amount Held:</label>
