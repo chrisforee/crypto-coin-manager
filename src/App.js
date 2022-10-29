@@ -1,5 +1,5 @@
 import './App.css';
-import AllCoins from './components/AllCoins';
+import MainCoinsPage from './components/MainCoinsPage';
 import CoinForm from './components/CoinForm';
 import UpdateCoin from './components/UpdateCoin';
 import CoinDetails from './components/CoinDetails';
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<AllCoins />} />
+        <Route path="/" element={<MainCoinsPage />} />
         <Route path="/coin/new" element={<CoinForm />} />
         <Route path="/coin/update/:id" element={<UpdateCoin />} />
         <Route path = "/coin/details/:id" element= {<CoinDetails />}/>

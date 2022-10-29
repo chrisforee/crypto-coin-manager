@@ -42,33 +42,33 @@ const CoinForm = () => {
 }
     return (
         <div>
-    <form className="border border-dark p-3 w-50" onSubmit={submitHandler}>
-        {errors.map((err, index)=> <p key = {index} className="text-danger">{err}</p>)}
-            <div className='d-flex align-items-center justify-content-evenly'>
+    <form onSubmit={submitHandler}>
+        {errors.map((err, index)=> <p key = {index}>{err}</p>)}
+            <div>
                 <h1>Add Coin</h1> 
             </div>
-            <div className='text-start m-3'>
-                <label className='m-3'>Name:</label>
+            <div>
+                <label>Name:</label>
                 <input type="text" className='form-label' name='name' onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
-                <label className='m-3'>Logo:</label>
+            <div>
+                <label>Logo:</label>
                 <input type="text" className='form-label' name='img' onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
-                <label className='m-3'>URL:</label>
+            <div>
+                <label>URL:</label>
                 <input type="text" className='form-label' name='website' onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
+            <div>
                 <label className='m-3'>Amount Held:</label>
                 <input type="number" className='form-label' name='held' onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
-            <label className='m-3'>Owned Goal:</label>
+            <div>
+            <label>Owned Goal:</label>
             <input type="number" className='form-label' name='goal' onChange={onChangeHandler}></input>
             </div>
-            <button className=" m-2 btn btn-primary btn-lg " type="submit">Add Coin</button>
-            <Link className="m-2 btn btn-danger btn-lg" to="/">Back to Coin Board</Link>
+            <button type="submit">Add Coin</button>
+            <Link to="/">Back to Coin Board</Link>
         </form>
         </div>
   )

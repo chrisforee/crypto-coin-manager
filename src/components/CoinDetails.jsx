@@ -24,21 +24,21 @@ useEffect(()=>{
         .catch(err => console.log("Edit page get request error:", err))
 },[id])
     return (
-        <div className='border border-dark container w-75'>
+        <div>
             <h1>{formInfo.name}</h1>
-            <div className='d-flex align-items-top justify-content-evenly'>
-            <h3 className='border border-warning p-3'><img src={formInfo.img} alt="coin" height ="250px"/></h3>
-            <div className='border border-danger p-3'>
+            <div>
+            <h3><img src={formInfo.img} alt="coin" height ="250px"/></h3>
+            <div>
                 <h1>About</h1>
-                <h3 className='m-3'>URL: {formInfo.website}</h3>
-                <h3 className='m-3'>Discord: {formInfo.discord}</h3>
+                <h3>URL: {formInfo.website}</h3>
+                <h3>Discord: {formInfo.discord}</h3>
                 <h3>Twitter: {formInfo.twitter}</h3>
                 <h3>Coins Owned: {formInfo.held}</h3>
                 <h3>Owned Goal: {formInfo.goal}</h3>
             </div>
             </div>
-            <Link className="m-2 btn btn-danger btn btn-lg" to="/">Back to Coin board</Link>
-            <Link to ={`/coin/update/${id}`} className=" m-1 btn btn-lg btn-primary">Update Coin</Link>
+            <Link to="/">Back to Coin board</Link>
+            <Link to ={`/coin/update/${id}`}>Update Coin</Link>
         </div>
     )
 }

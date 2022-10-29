@@ -53,33 +53,33 @@ const submitHandler = (e) =>{
 }
     return (
         <div>
-    <form className="border border-dark p-3 w-50" onSubmit={submitHandler}>
-        {errors.map((err, index)=> <p key = {index} className="text-danger">{err}</p>)}
-        <div className='d-flex align-items-center justify-content-evenly'>
+    <form onSubmit={submitHandler}>
+        {errors.map((err, index)=> <p key = {index}>{err}</p>)}
+        <div>
             <h1>Update Coin</h1> 
         </div>
-            <div className='text-start m-3'>
-                <label className='m-3'>Name:</label>
+            <div>
+                <label>Name:</label>
                 <input type="text" className='form-label' name='name' value={formInfo.name}  onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
-                <label className='m-3'>Logo:</label>
+            <div>
+                <label>Logo:</label>
                 <input type="text" className='form-label' name='img' value={formInfo.img}  onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
+            <div>
                 <label className='m-3'>URL:</label>
                 <input type="text" className='form-label' name='website' value={formInfo.website}  onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
-                <label className='m-3'>Amount Held:</label>
+            <div>
+                <label>Amount Held:</label>
                 <input type="number" className='form-label' name='held' value={formInfo.held}  onChange={onChangeHandler}></input>
             </div>
-            <div className='text-start m-3'>
-            <label className='m-3'>Owned Goal:</label>
+            <div >
+            <label>Owned Goal:</label>
                 <input type="number" className='form-label' name='goal' value={formInfo.goal}  onChange={onChangeHandler}></input>
             </div>
-            <button className=" m-2 btn btn-primary btn-lg" type="submit">Update Coin</button>
-            <Link className="m-2 btn btn-danger btn-lg" to="/">Back to Coin Board</Link>
+            <button type="submit">Update Coin</button>
+            <Link to="/">Back to Coin Board</Link>
         </form>
         </div>
     )
